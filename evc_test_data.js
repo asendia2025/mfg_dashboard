@@ -2988,7 +2988,7 @@ const evcTestData = [
     "model": "Quantum 2013D-Air Core_EtherCAT",
     "test_date": "2026/4/16",
     "failures": "1",
-    "error_step_1": "HF Phase Calibration",
+    "error_step_1": "",
     "error_step_2": "",
     "error_step_3": "",
     "one_pager_num": ""
