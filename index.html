@@ -127,6 +127,7 @@
                         <button onclick="updateFpyFilter('All')" id="btn-All" class="filter-btn px-4 py-1.5 rounded text-xs font-semibold bg-white text-blue-700 shadow-sm transition-all">All</button>
                         <button onclick="updateFpyFilter('Quantum')" id="btn-Quantum" class="filter-btn px-4 py-1.5 rounded text-xs font-semibold text-slate-600 transition-all">Quantum</button>
                         <button onclick="updateFpyFilter('Tykon')" id="btn-Tykon" class="filter-btn px-4 py-1.5 rounded text-xs font-semibold text-slate-600 transition-all">Tykon</button>
+                        <button onclick="updateFpyFilter('Chronos2.0')" id="btn-Chronos2.0" class="filter-btn px-4 py-1.5 rounded text-xs font-semibold text-slate-600 transition-all">Chronos2.0</button>
                     </div>
                 </div>
 
@@ -301,7 +302,7 @@
         function checkPassword(e) {
             e.preventDefault();
             const input = document.getElementById('password-input');
-            if (input.value === 'evc8360') {
+            if (input.value === 'evc8775') {
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('app-content').classList.remove('hidden');
                 initApp();
