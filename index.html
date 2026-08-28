@@ -212,7 +212,6 @@
                         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
                             <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50/50">
                                 <h3 class="text-base font-bold text-slate-800 flex items-center gap-2"><i data-lucide="clipboard-list" class="w-4 h-4 text-rose-500"></i> Recent Failure Logs</h3>
-                                <button onclick="downloadCSV()" class="flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-600 text-xs font-bold rounded shadow-sm"><i data-lucide="download" class="w-3.5 h-3.5"></i> Download All</button>
                             </div>
                             <div class="overflow-x-auto">
                                 <table class="w-full text-xs text-left">
@@ -302,7 +301,7 @@
         function checkPassword(e) {
             e.preventDefault();
             const input = document.getElementById('password-input');
-            if (input.value === 'evc5534') {
+            if (input.value === 'evc8360') {
                 document.getElementById('login-screen').classList.add('hidden');
                 document.getElementById('app-content').classList.remove('hidden');
                 initApp();
@@ -597,17 +596,6 @@
             window.dispatchEvent(new Event('resize'));
         }
 
-        // CSV Download (FPY Only)
-        function downloadCSV() {
-            if(!fullData.length) return;
-            const headers = Object.keys(fullData[0]);
-            const csv = [headers.join(',')].concat(fullData.map(r => headers.map(h => `"${(''+r[h]).replace(/"/g,'\\"')}"`).join(','))).join('\n');
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
-            link.download = "evc_logs.csv";
-            link.click();
-        }
-
         // Update Wrappers
         function updateFpyFilter(cat) { renderFpyDashboard(cat); }
         function updateNpiFilter(status) { renderNpiDashboard(status); }
@@ -615,7 +603,3 @@
     </script>
 </body>
 </html>
-
-
-
-
